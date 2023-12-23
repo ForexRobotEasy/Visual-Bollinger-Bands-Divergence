@@ -1,0 +1,108 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                          Visual Bollinger Bands Divergence |
+//|                                  Developer's Site: forexroboteasy.com |
+//|                                          Development: Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+#property copyright 'forexroboteasy.com'
+#property link      'https://www.forexroboteasy.com'
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+#property version   '1.00'
+#property strict
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+#include <Trade\Trade.mqh>
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+class VisualBollingerBandsDivergence
+{
+private:
+   int period;
+   double deviation;
+   double significanceThreshold;
+   int bollingerBandsColor;
+   int divergenceColor;
+
+public:
+   VisualBollingerBandsDivergence(int _period, double _deviation, double _significanceThreshold, int _bollingerBandsColor, int _divergenceColor)
+   {
+      period = _period;
+      deviation = _deviation;
+      significanceThreshold = _significanceThreshold;
+      bollingerBandsColor = _bollingerBandsColor;
+      divergenceColor = _divergenceColor;
+   }
+
+   void CalculateBollingerBands()
+   {
+      // Code to calculate Bollinger Bands using the specified period and standard deviation
+      // ...
+   }
+
+   void IdentifyDivergences()
+   {
+      // Code to identify divergences between the price and Bollinger Bands
+      // considering both bullish and bearish divergences
+      // ...
+   }
+
+   void DetermineSignificance()
+   {
+      // Code to determine the significance of each divergence based on predefined criteria
+      // ...
+   }
+
+   void DisplayVisualCues()
+   {
+      // Code to display the Bollinger Bands and divergences visually
+      // using a user-friendly interface with customizable visual representation
+      // ...
+   }
+
+   void PredictPriceReversals()
+   {
+      // Code to use the identified divergences to predict potential price reversals
+      // and provide alerts or notifications to traders when significant divergences occur
+      // indicating potential trading opportunities
+      // ...
+   }
+
+   void Run()
+   {
+      CalculateBollingerBands();
+      IdentifyDivergences();
+      DetermineSignificance();
+      DisplayVisualCues();
+      PredictPriceReversals();
+   }
+};
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+void OnStart()
+{
+   VisualBollingerBandsDivergence robot(20, 2.0, 0.5, clrBlue, clrRed);
+   robot.Run();
+}
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
